@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action = "/form" accept-charset="utf-8" name = "person_info" method = "get">
+    <fieldset style = "width:378px">
+        <legend>개인 정보 입력</legend>
+        이름 : <input type = "text" name = "name" required/><br><br>
+        이메일주소:
+        <input type = "text" name = "email"/><br><br>
+
+        성별 : 남<input type = "radio" name = "gender" value="남자"/>
+        여<input type = "radio" name = "gender" value="여자" /><br><br>
+
+        흡연 여부 : 흡연자<input type = "radio" name = "smoker" value="흡연자"/>
+        비흡연자<input type = "radio" name = "smoker" value="비흡연자"/><br><br>
+
+        관심사 :
+        연예<input type = "checkbox" name = "interests" value="연예"/>
+        스포츠<input type = "checkbox" name = "interests" value="스포츠" />
+        IT<input type = "checkbox" name = "interests" value="IT"/>
+        게임<input type = "checkbox" name = "interests" value="게임"/>
+        음악<input type = "checkbox" name = "interests" value="음악"/><br><br>
+
+        가입 인사 <br>
+        <textarea name = "comment" cols = "50" rows = "5"
+                  placeholder="가입인사를 남겨주세요."></textarea>
+        <br><br>
+        <input type = "submit" value = "submit"/>
+        <input type = "reset" value = "reset"/><br><br>
+    </fieldset>
+
+</form>
+</body>
+</html>
