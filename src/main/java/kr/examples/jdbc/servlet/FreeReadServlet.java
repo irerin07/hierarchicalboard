@@ -31,6 +31,7 @@ public class FreeReadServlet extends HttpServlet {
             // 오류 화면으로 redirect
             return;
         }
+        boardDao.updateReadCount(id);
 
         req.setAttribute("board", board);
 

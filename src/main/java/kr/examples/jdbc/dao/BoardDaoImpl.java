@@ -148,7 +148,19 @@ public class BoardDaoImpl implements BoardDao {
 
     @Override
     public void updateReadCount(long id) {
-
+        Connection conn = null;
+        PreparedStatement ps = null;
+        try{
+            conn = DBUtil.getInstance().getConnection();
+            String sql = "UPDATE freelist SET read_count = read_count + 1 WHERE id = ?";
+            ps = conn.prepareStatement(sql);
+            ps.setLong(1, id);
+            ps.executeUpdate(); // 입력,수정,삭제 건수 가 리턴된다.
+        }catch(Exception ex){
+            ex.printStackTrace();
+        }finally {
+            DBUtil.close(ps, conn);
+        }
     }
     @Override
     public void updateFamilyCount(long id) {
