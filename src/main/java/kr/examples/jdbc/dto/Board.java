@@ -1,4 +1,4 @@
-package kr.examples.jdbc.dao;
+package kr.examples.jdbc.dto;
 
 import java.util.Date;
 

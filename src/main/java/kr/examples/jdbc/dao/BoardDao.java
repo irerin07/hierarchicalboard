@@ -1,5 +1,7 @@
 package kr.examples.jdbc.dao;
 
+import kr.examples.jdbc.dto.Board;
+
 import java.util.List;
 
 public interface BoardDao {
@@ -13,5 +15,7 @@ public interface BoardDao {
 
     void updateReadCount(long id);
 
-    void updateFamilyCount(long id);
+    public void updateFamily();
+
+    public void getBoardId();
 }

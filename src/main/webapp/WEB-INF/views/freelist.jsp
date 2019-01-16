@@ -124,15 +124,31 @@
                         <li class="page-item disabled">
                             <a class="page-link" href="#">&laquo</a>
                         </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item active"><a class="page-link" href="#">3</a></li>
+                        <%--<li class="page-item"><a class="page-link" href="/free/list?page=2">2</a></li>--%>
+                        <%--<c:forEach items="${boards}" var="board">--%>
+                        <%--<li class="page-item"><a class="page-link" href="/free/list">${board.page}</a></li>--%>
+                        <%--</c:forEach>--%>
                         <li class="page-item">
                             <a class="page-link" href="#">&raquo</a>
                         </li>
                     </ul>
                 </nav>
             </div>
+            <%--<div class="justify-content-center">--%>
+                <%--<nav aria-label="Page navigation example">--%>
+                    <%--<ul class="pagination">--%>
+                        <%--<li class="page-item disabled">--%>
+                            <%--<a class="page-link" href="#">&laquo</a>--%>
+                        <%--</li>--%>
+                        <%--<li class="page-item"><a class="page-link" href="/free/list">1</a></li>--%>
+                        <%--<li class="page-item"><a class="page-link" href="#">2</a></li>--%>
+                        <%--<li class="page-item"><a class="page-link" href="#">3</a></li>--%>
+                        <%--<li class="page-item">--%>
+                            <%--<a class="page-link" href="#">&raquo</a>--%>
+                        <%--</li>--%>
+                    <%--</ul>--%>
+                <%--</nav>--%>
+            <%--</div>--%>
             <div>
                 <button type="button" class="btn btn-outline-dark"><a href="/free/write"
                                                                       style="text-decoration: none; color: black">글쓰기</a>

@@ -1,8 +1,10 @@
 package kr.examples.jdbc.servlet;
 
-import kr.examples.jdbc.dao.Board;
+import kr.examples.jdbc.dto.Board;
 import kr.examples.jdbc.dao.BoardDao;
 import kr.examples.jdbc.dao.BoardDaoImpl;
+import kr.examples.jdbc.service.BoardService;
+import kr.examples.jdbc.service.BoardServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,13 +27,13 @@ public class FreeReadServlet extends HttpServlet {
             // 오류 화면으로 redirect
             return;
         }
-        BoardDao boardDao = new BoardDaoImpl();
-        Board board = boardDao.getBoard(id);
+        BoardService boardService = new BoardServiceImpl();
+        Board board = boardService.getBoard(id);
         if(board == null){
             // 오류 화면으로 redirect
             return;
         }
-        boardDao.updateReadCount(id);
+        //boardService.updateReadCount(id);
 
         req.setAttribute("board", board);
 
